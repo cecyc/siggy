@@ -8,19 +8,9 @@ This is experimental, use at your own risk.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'siggy'
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install siggy
+  $ gem "siggy", :git => "git://github.com/cecyc/siggy.git"
+```
 
 ## Usage
 

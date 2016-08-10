@@ -11,13 +11,13 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Signature extraction with Full Contact and Context.IO.}
   spec.description   = %q{This gem uses Full Contact to extract email signatures from a Context.IO message.}
-  spec.homepage      = "http://cecycorrea.com"
+  spec.homepage      = "https://github.com/cecyc/siggy"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata['allowed_push_host'] = "https://github.com/cecyc/siggy"
   else
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
