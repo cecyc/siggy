@@ -1,8 +1,10 @@
 # Siggy
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/siggy`. To experiment with that code, run `bin/console` for an interactive prompt.
+Experimental gem that takes Context.IO and Full Contact to extract data from email signatures.
 
-TODO: Delete this and the text above, and describe your gem
+This is experimental, use at your own risk.
+
+![https://raw.githubusercontent.com/cecyc/meme-hub/master/experiment.gif](experiment!)
 
 ## Installation
 
@@ -22,20 +24,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+* This gem assumes you have a Context.IO key and secret
+* This gem assumes you have a Full Contact Developer key
+* This gem assumes you have added accounts and can get messages from Context.IO
 
-## Development
+Get an individual raw RFC-822 message to pass to Full Contact parser.
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+```
+Siggy.get_msg("1234someaccountid", "1234somemessageid")
+# Returns raw RFC-822 message
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Given a raw RFC-822 message, parse it
 
-## Contributing
+```
+Siggy.parse(message)
+#JSON response of parsed signature
+```
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/siggy.
+Given an account id, grab the last 5 messages in the account, and send them to the parser
 
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+```
+Siggy.parse_messages("1234someaccountid")
+#JSON responses of parsed signatures
+```
