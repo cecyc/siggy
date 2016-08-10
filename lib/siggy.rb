@@ -21,7 +21,7 @@ module Siggy
     uri = URI.parse("https://api.fullcontact.com/v2/mail/extract")
     request = Net::HTTP::Post.new(uri)
     request.content_type = "message/rfc822"
-    request["X-Fullcontact-Apikey"] = "782312587907c15f"
+    request["X-Fullcontact-Apikey"] = "YOURKEY"
     request["Accept"] = "application/json"
     request.body = message
     response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: uri.scheme == "https") do |http|
