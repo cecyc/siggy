@@ -4,7 +4,7 @@ Experimental gem that takes Context.IO and Full Contact to extract data from ema
 
 This is experimental, use at your own risk.
 
-![https://raw.githubusercontent.com/cecyc/meme-hub/master/experiment.gif](experiment!)
+![Experiment!](https://raw.githubusercontent.com/cecyc/meme-hub/master/experiment.gif)
 
 ## Installation
 
